@@ -308,3 +308,4 @@
 {"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:47:55.916Z"}
 {"level":"info","message":"User 67b36fc7fa1ff083f0aadec4 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:48:05.315Z"}
 {"level":"info","message":"User 67b6f68d4d8699ebccd172d7 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:48:11.476Z"}
+{"level":"error","message":"Redis Client Error Socket closed unexpectedly","service":"chat-app","stack":"Error: Socket closed unexpectedly\n    at TLSSocket.<anonymous> (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@redis/client/dist/lib/client/socket.js:194:118)\n    at Object.onceWrapper (node:events:634:26)\n    at TLSSocket.emit (node:events:531:35)\n    at node:net:338:12\n    at TCP.done (node:_tls_wrap:657:7)","timestamp":"2025-02-20T10:54:37.617Z"}
