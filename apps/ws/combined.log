@@ -1,0 +1,310 @@
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:39:22.081Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:39:22.084Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:22.090Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:22.103Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:22.155Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:22.258Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:39:23.044Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:39:23.047Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:23.054Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:23.073Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:23.126Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:23.229Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:23.381Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:23.583Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:23.834Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:24.137Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:24.490Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:24.892Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:25.344Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:25.847Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:26.349Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:26.850Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:27.353Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:27.855Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:28.357Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:28.858Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:29.360Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:29.862Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:30.364Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:30.866Z"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error","service":"chat-app","stack":"AggregateError: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2025-02-20T08:39:31.368Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:47:59.858Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:47:59.861Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:02.145Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:02.151Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:02.210Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:02.314Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:02.469Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:02.673Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:02.930Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:03.240Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"caching-3a904d28-techrk2002-0997.k.aivencloud.com","level":"error","message":"Redis Client Error getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com","service":"chat-app","stack":"Error: getaddrinfo ENOTFOUND caching-3a904d28-techrk2002-0997.k.aivencloud.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26)","syscall":"getaddrinfo","timestamp":"2025-02-20T08:48:03.596Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:50:41.016Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:50:41.019Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:51:14.436Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:51:14.439Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:51:18.606Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:51:18.609Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:51:24.577Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:51:24.580Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:52:11.527Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:52:11.530Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:54:44.717Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:54:44.720Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:55:00.793Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:55:00.796Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:55:16.452Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:55:16.455Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:57:35.303Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:57:35.306Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:57:40.618Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:57:40.621Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:58:35.663Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:58:35.666Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:58:37.403Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:58:37.405Z"}
+{"level":"info","message":"HTTP server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T08:59:36.399Z"}
+{"level":"info","message":"WebSocket server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T08:59:36.402Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:10:38.873Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:10:38.877Z"}
+{"level":"info","message":"User 67b6f1b471b59ad7eac2955e connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T09:12:30.223Z"}
+{"isOperational":true,"level":"error","message":"ERROR 💥 Please log in to access this resource","service":"chat-app","stack":"Error: Please log in to access this resource\n    at /mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:17:13\n    at Generator.next (<anonymous>)\n    at /mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:4:12)\n    at protect (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:12:5)\n    at Layer.handle [as handle_request] (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/express/lib/router/layer.js:95:5)\n    at next (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/express/lib/router/layer.js:95:5)","statusCode":401,"timestamp":"2025-02-20T09:16:25.887Z"}
+{"isOperational":true,"level":"error","message":"ERROR 💥 Please log in to access this resource","service":"chat-app","stack":"Error: Please log in to access this resource\n    at /mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:17:13\n    at Generator.next (<anonymous>)\n    at /mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:4:12)\n    at protect (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:12:5)\n    at Layer.handle [as handle_request] (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/express/lib/router/layer.js:95:5)\n    at next (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/express/lib/router/layer.js:95:5)","statusCode":401,"timestamp":"2025-02-20T09:16:49.339Z"}
+{"level":"error","message":"Redis Client Error Socket closed unexpectedly","service":"chat-app","stack":"Error: Socket closed unexpectedly\n    at TLSSocket.<anonymous> (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@redis/client/dist/lib/client/socket.js:194:118)\n    at Object.onceWrapper (node:events:634:26)\n    at TLSSocket.emit (node:events:531:35)\n    at node:net:338:12\n    at TCP.done (node:_tls_wrap:657:7)","timestamp":"2025-02-20T09:22:03.084Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:25:01.201Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:25:01.204Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:25:25.604Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:25:25.607Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:25:38.994Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:25:38.997Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:25:40.071Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:25:40.073Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:03.881Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:03.885Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:11.939Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:11.942Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:15.444Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:15.447Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:21.389Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:21.392Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:23.332Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:23.335Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:26.195Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:26.198Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:27.396Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:27.399Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:35.645Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:35.648Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:41.473Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:41.476Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:42.985Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:42.987Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:26:48.377Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:26:48.380Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:28:07.373Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:28:07.376Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:28:20.598Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:28:20.602Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:28:23.519Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:28:23.521Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:28:28.363Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:28:28.366Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:28:34.391Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:28:34.394Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:29:13.546Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:29:13.549Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:29:16.375Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:29:16.377Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:29:21.128Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:29:21.131Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:29:23.375Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:29:23.377Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:29:26.216Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:29:26.219Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:29:34.943Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:29:34.946Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:29:42.752Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:29:42.755Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:31:04.224Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:31:04.227Z"}
+{"isOperational":true,"level":"error","message":"ERROR 💥 You cannot create a chat with yourself","service":"chat-app","stack":"Error: You cannot create a chat with yourself\n    at /mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/controllers/chat.controller.ts:35:13\n    at Generator.next (<anonymous>)\n    at fulfilled (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/controllers/chat.controller.ts:5:58)","statusCode":400,"timestamp":"2025-02-20T09:31:11.907Z"}
+{"level":"info","message":"User 67b36fc7fa1ff083f0aadec4 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T09:36:16.054Z"}
+{"level":"info","message":"User 67b6f68d4d8699ebccd172d7 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T09:36:39.727Z"}
+{"level":"info","message":"User 67b36fc7fa1ff083f0aadec4 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T09:36:59.573Z"}
+{"clientVersion":"6.3.1","level":"error","message":"Failed to parse message: \nInvalid `prisma.message.create()` invocation in\n/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/services/websocket.service.ts:65:42\n\n  62 private async handleChat(ws: WebSocket, payload: any) {\n  63   const { chatId, content, senderId } = payload;\n  64 \n→ 65   const message = await prisma.message.create({\n         data: {\n           senderId: undefined,\n           chatId: undefined,\n       +   content: String\n         }\n       })\n\nArgument `content` is missing.","name":"PrismaClientValidationError","service":"chat-app","stack":"PrismaClientValidationError: \nInvalid `prisma.message.create()` invocation in\n/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/services/websocket.service.ts:65:42\n\n  62 private async handleChat(ws: WebSocket, payload: any) {\n  63   const { chatId, content, senderId } = payload;\n  64 \n→ 65   const message = await prisma.message.create({\n         data: {\n           senderId: undefined,\n           chatId: undefined,\n       +   content: String\n         }\n       })\n\nArgument `content` is missing.\n    at xn (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@prisma/client/runtime/library.js:29:1363)\n    at Bn.handleRequestError (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@prisma/client/runtime/library.js:121:7005)\n    at Bn.handleAndLogRequestError (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@prisma/client/runtime/library.js:121:6686)\n    at Bn.request (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@prisma/client/runtime/library.js:121:6393)\n    at l (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@prisma/client/runtime/library.js:130:9645)","timestamp":"2025-02-20T09:43:07.148Z"}
+{"level":"error","message":"Redis Client Error Socket closed unexpectedly","service":"chat-app","stack":"Error: Socket closed unexpectedly\n    at TLSSocket.<anonymous> (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@redis/client/dist/lib/client/socket.js:194:118)\n    at Object.onceWrapper (node:events:634:26)\n    at TLSSocket.emit (node:events:531:35)\n    at node:net:338:12\n    at TCP.done (node:_tls_wrap:657:7)","timestamp":"2025-02-20T09:52:35.515Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:55:50.014Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:55:50.017Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:55:59.656Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:55:59.658Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:56:03.379Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:56:03.381Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T09:56:06.263Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T09:56:06.266Z"}
+{"isOperational":true,"level":"error","message":"ERROR 💥 User with this email or username already exists","service":"chat-app","stack":"Error: User with this email or username already exists\n    at /mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/controllers/auth.controller.ts:24:13\n    at Generator.next (<anonymous>)\n    at fulfilled (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/controllers/auth.controller.ts:5:58)","statusCode":400,"timestamp":"2025-02-20T09:56:14.847Z"}
+{"level":"error","message":"Redis Client Error Socket closed unexpectedly","service":"chat-app","stack":"Error: Socket closed unexpectedly\n    at TLSSocket.<anonymous> (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@redis/client/dist/lib/client/socket.js:194:118)\n    at Object.onceWrapper (node:events:634:26)\n    at TLSSocket.emit (node:events:531:35)\n    at node:net:338:12\n    at TCP.done (node:_tls_wrap:657:7)","timestamp":"2025-02-20T10:01:06.709Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:04:51.460Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:04:51.463Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:04:56.324Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:04:56.327Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:05:12.324Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:05:12.327Z"}
+{"level":"error","message":"Redis Client Error Connection timeout","service":"chat-app","stack":"Error: Connection timeout\n    at TLSSocket.<anonymous> (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@redis/client/dist/lib/client/socket.js:177:124)\n    at Object.onceWrapper (node:events:633:28)\n    at TLSSocket.emit (node:events:519:28)\n    at TLSSocket.Socket._onTimeout (node:net:590:8)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)","timestamp":"2025-02-20T10:05:17.282Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:05:20.254Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:05:20.256Z"}
+{"level":"error","message":"Redis Client Error Socket closed unexpectedly","service":"chat-app","stack":"Error: Socket closed unexpectedly\n    at TLSSocket.<anonymous> (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/node_modules/@redis/client/dist/lib/client/socket.js:194:118)\n    at Object.onceWrapper (node:events:634:26)\n    at TLSSocket.emit (node:events:531:35)\n    at node:net:338:12\n    at TCP.done (node:_tls_wrap:657:7)","timestamp":"2025-02-20T10:10:20.809Z"}
+{"isOperational":true,"level":"error","message":"ERROR 💥 User no longer exists","service":"chat-app","stack":"Error: User no longer exists\n    at /mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:35:13\n    at Generator.next (<anonymous>)\n    at fulfilled (/mnt/Data/Language-Play-Ground/Projects/MERN/my/quick-chat/apps/ws/src/middleware/auth.middleware.ts:5:58)","statusCode":401,"timestamp":"2025-02-20T10:11:36.187Z"}
+{"level":"info","message":"User 67b6f68d4d8699ebccd172d7 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:16:25.125Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:18:40.316Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:18:40.320Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:18:43.187Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:18:43.190Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:19:03.727Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:19:03.731Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:19:06.008Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:19:06.011Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:19:10.910Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:19:10.913Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:19:15.341Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:19:15.345Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:20:53.595Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:20:53.598Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:20:59.455Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:20:59.457Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:21:02.014Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:21:02.018Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:21:03.687Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:21:03.690Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:21:08.481Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:21:08.484Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:21:18.937Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:21:18.940Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:21:50.433Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:21:50.435Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:22:03.070Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:22:03.073Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:22:51.834Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:22:51.837Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:22:52.712Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:22:52.715Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:23:42.381Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:23:42.384Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:23:46.648Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:23:46.651Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:23:51.393Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:23:51.396Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:23:58.800Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:23:58.804Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:23:59.967Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:23:59.970Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:05.070Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:05.073Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:12.361Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:12.364Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:18.713Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:18.717Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:19.610Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:19.613Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:28.890Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:28.893Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:31.133Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:31.136Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:35.223Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:35.225Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:39.713Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:39.715Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:24:47.362Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:24:47.364Z"}
+{"level":"info","message":"User 67b6f68d4d8699ebccd172d7 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:25:22.464Z"}
+{"level":"info","message":"User 67b36fc7fa1ff083f0aadec4 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:25:31.909Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:26:06.636Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:26:06.639Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:26:10.850Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:26:10.853Z"}
+{"level":"info","message":"User 67b6f68d4d8699ebccd172d7 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:26:12.946Z"}
+{"level":"info","message":"User 67b36fc7fa1ff083f0aadec4 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:26:15.278Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:27:41.016Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:27:41.019Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:27:45.695Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:27:45.699Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:28:13.157Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:28:13.160Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:28:15.846Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:28:15.849Z"}
+{"level":"info","message":"User 67b6f68d4d8699ebccd172d7 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:28:20.230Z"}
+{"level":"info","message":"User 67b36fc7fa1ff083f0aadec4 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:28:22.325Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:29:20.627Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:29:20.630Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:32:38.559Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:32:38.562Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:33:16.271Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:33:16.274Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:33:28.542Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:33:28.546Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:33:32.396Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:33:32.399Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:33:33.326Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:33:33.329Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:33:42.267Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:33:42.271Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:34:03.038Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:34:03.041Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:34:08.645Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:34:08.647Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:34:36.904Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:34:36.907Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:34:39.655Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:34:39.658Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:35:23.774Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:35:23.777Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:35:37.124Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:35:37.126Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:35:48.132Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:35:48.135Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:35:50.346Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:35:50.350Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:35:51.497Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:35:51.500Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:37:25.008Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:37:25.011Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:37:30.601Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:37:30.604Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:39:18.667Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:39:18.669Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:39:22.969Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:39:22.974Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:39:26.205Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:39:26.207Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:39:28.844Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:39:28.847Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:39:40.511Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:39:40.514Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:39:44.382Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:39:44.384Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:39:56.138Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:39:56.141Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:39:57.210Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:39:57.213Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:40:50.712Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:40:50.715Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:41:14.781Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:41:14.784Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:41:19.702Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:41:19.705Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:41:31.159Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:41:31.163Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:41:48.183Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:41:48.187Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:41:50.232Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:41:50.235Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:41:57.254Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:41:57.257Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:43:01.609Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:43:01.612Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:43:03.668Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:43:03.671Z"}
+{"level":"info","message":"HTTP server listening on port 8080","service":"chat-app","timestamp":"2025-02-20T10:47:55.913Z"}
+{"level":"info","message":"WebSocket server listening on port 8081","service":"chat-app","timestamp":"2025-02-20T10:47:55.916Z"}
+{"level":"info","message":"User 67b36fc7fa1ff083f0aadec4 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:48:05.315Z"}
+{"level":"info","message":"User 67b6f68d4d8699ebccd172d7 connected to WebSocket","service":"chat-app","timestamp":"2025-02-20T10:48:11.476Z"}
