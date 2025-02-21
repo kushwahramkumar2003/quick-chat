@@ -4,6 +4,7 @@ import { config } from "../config/config";
 import { redisClient } from "./redis.service";
 import { logger } from "../utils/logger";
 import prisma from "./prisma.service";
+import { boolean } from "zod";
 
 // Types and Interfaces
 export interface User {
@@ -114,21 +115,21 @@ export class WebSocketService {
       const decoded = jwt.verify(token, config.jwt.secret) as { id: string };
       const cacheKey = `user:${decoded.id}`;
 
-      const cachedUser = await redisClient.get(cacheKey);
-      if (cachedUser) {
-        return JSON.parse(cachedUser);
-      }
+      // const cachedUser = await redisClient.get(cacheKey);
+      // if (cachedUser) {
+      //   return JSON.parse(cachedUser);
+      // }
 
       const user = await prisma.user.findUnique({
         where: { id: decoded.id },
         select: { id: true, email: true, username: true },
       });
 
-      if (user) {
-        await redisClient.set(cacheKey, JSON.stringify(user), {
-          EX: this.CACHE_EXPIRY,
-        });
-      }
+      // if (user) {
+      //   await redisClient.set(cacheKey, JSON.stringify(user), {
+      //     EX: this.CACHE_EXPIRY,
+      //   });
+      // }
 
       return user;
     } catch (error) {
@@ -175,8 +176,12 @@ export class WebSocketService {
         data: { content, senderId, chatId },
       });
 
+      console.log("Chat message created:", message);
+
       const chat = await this.getChatById(chatId);
       if (!chat) return;
+
+      console.log("Chat found:", chat);
 
       await this.notifyRecipient(chat, senderId, {
         type: WebSocketMessageType.CHAT,
@@ -201,11 +206,15 @@ export class WebSocketService {
           user1: { select: { id: true, email: true, username: true } },
           user2: { select: { id: true, email: true, username: true } },
           messages: {
-            orderBy: { createdAt: "desc" },
+            orderBy: { createdAt: "asc" },
             take: 50,
           },
         },
       });
+
+      console.log("Chat found:", chat);
+      console.log("Handle join chats", chat);
+      console.log(`Total msg in chat ${chat?.id}`, chat?.messages.length);
 
       if (!chat) {
         this.sendError(ws, "Chat not found");
@@ -223,7 +232,7 @@ export class WebSocketService {
         });
       }
 
-      await this.invalidateCache(payload.chatId);
+      // await this.invalidateCache(payload.chatId);
     } catch (error) {
       logger.error("Join handling error:", error);
       this.sendError(ws, "Failed to join chat");
@@ -237,6 +246,8 @@ export class WebSocketService {
     try {
       const { chatId, userId, isTyping } = payload;
 
+      console.log("Typing payload", payload);
+
       if (!chatId || !userId) {
         this.sendError(ws, "Invalid typing status");
         return;
@@ -247,6 +258,7 @@ export class WebSocketService {
 
       await this.notifyRecipient(chat, userId, {
         type: WebSocketMessageType.TYPING,
+        //@ts-ignore
         payload: { chatId, userId, isTyping },
       });
     } catch (error) {
@@ -275,12 +287,22 @@ export class WebSocketService {
     const recipientSocket = this.userSockets.get(recipientId);
 
     if (recipientSocket?.readyState === WebSocket.OPEN) {
+      // this.userSockets.get(senderId)?.send(JSON.stringify(message));
+      console.log("Sending message to recipient", message);
       recipientSocket.send(JSON.stringify(message));
+    }
+    const senderSocket = this.userSockets.get(senderId);
+    if (
+      message.type === WebSocketMessageType.CHAT &&
+      senderSocket?.readyState === WebSocket.OPEN
+    ) {
+      console.log("Sending message to sender", message);
+      senderSocket.send(JSON.stringify(message));
     }
   }
 
   private async invalidateCache(chatId: string): Promise<void> {
-    await redisClient.del(`chat:${chatId}`);
+    // await redisClient.del(`chat:${chatId}`);
   }
 
   private sendError(ws: WebSocket, message: string): void {
