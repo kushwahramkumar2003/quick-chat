@@ -188,7 +188,7 @@ export const getChat = async (
           orderBy: {
             createdAt: "desc",
           },
-          take: 50,
+          take: 1,
         },
       },
     });

@@ -37,6 +37,7 @@ export enum WebSocketMessageType {
   CONNECTION = "connection",
   ERROR = "error",
   PRESENCE = "presence",
+  ONLINE = "online",
 }
 
 export enum WebSocketCloseCode {
@@ -68,6 +69,11 @@ interface TypingPayload extends BaseWebSocketPayload {
 
 interface ConnectionPayload extends BaseWebSocketPayload {
   status: "connected" | "disconnected";
+}
+
+interface OnlineStatusPayload extends BaseWebSocketPayload {
+  user2Id: string;
+  userId: string;
 }
 
 interface WebSocketMessage<
@@ -108,6 +114,10 @@ export class WebSocketService {
       WebSocketMessageType.TYPING,
       this.handleTyping.bind(this)
     );
+    this.messageHandlers.set(
+      WebSocketMessageType.ONLINE,
+      this.handleOnlineStatus.bind(this)
+    );
   }
 
   private async authenticateConnection(token: string): Promise<User | null> {
@@ -115,21 +125,21 @@ export class WebSocketService {
       const decoded = jwt.verify(token, config.jwt.secret) as { id: string };
       const cacheKey = `user:${decoded.id}`;
 
-      // const cachedUser = await redisClient.get(cacheKey);
-      // if (cachedUser) {
-      //   return JSON.parse(cachedUser);
-      // }
+      const cachedUser = await redisClient.get(cacheKey);
+      if (cachedUser) {
+        return JSON.parse(cachedUser);
+      }
 
       const user = await prisma.user.findUnique({
         where: { id: decoded.id },
         select: { id: true, email: true, username: true },
       });
 
-      // if (user) {
-      //   await redisClient.set(cacheKey, JSON.stringify(user), {
-      //     EX: this.CACHE_EXPIRY,
-      //   });
-      // }
+      if (user) {
+        await redisClient.set(cacheKey, JSON.stringify(user), {
+          EX: this.CACHE_EXPIRY,
+        });
+      }
 
       return user;
     } catch (error) {
@@ -207,14 +217,14 @@ export class WebSocketService {
           user2: { select: { id: true, email: true, username: true } },
           messages: {
             orderBy: { createdAt: "asc" },
-            take: 50,
+            take: 500,
           },
         },
       });
 
-      console.log("Chat found:", chat);
-      console.log("Handle join chats", chat);
-      console.log(`Total msg in chat ${chat?.id}`, chat?.messages.length);
+      // console.log("Chat found:", chat);
+      // console.log("Handle join chats", chat);
+      // console.log(`Total msg in chat ${chat?.id}`, chat?.messages.length);
 
       if (!chat) {
         this.sendError(ws, "Chat not found");
@@ -236,6 +246,81 @@ export class WebSocketService {
     } catch (error) {
       logger.error("Join handling error:", error);
       this.sendError(ws, "Failed to join chat");
+    }
+  }
+
+  private async handleOnlineStatus(
+    ws: WebSocket,
+    payload: OnlineStatusPayload
+  ): Promise<void> {
+    try {
+      console.log("Handle online status", payload);
+      const { userId, user2Id } = payload;
+      
+      if (!userId) {
+        this.sendError(ws, "Invalid online status");
+        return;
+      }
+
+      const chat = await prisma.chat.findFirst({
+        where: {
+          OR: [
+            { user1Id: userId, user2Id },
+            { user1Id: user2Id, user2Id: userId },
+          ],
+        },
+      });
+
+      console.log("Chat found for online status: ", chat);
+
+      if (!chat) return;
+
+      if (
+        !this.userSockets.get(user2Id) ||
+        this.userSockets.get(user2Id)?.readyState !== WebSocket.OPEN
+      ) {
+        console.log("User is offline");
+        //send last seen status
+        const lastSeen = await redisClient.get(`lastSeen:${user2Id}`);
+        const onlineStatus = lastSeen
+          ? new Date(lastSeen) > new Date(Date.now() - 30000)
+          : false;
+
+        console.log("Last seen status", lastSeen, onlineStatus);
+        this.userSockets.get(userId)?.send(
+          JSON.stringify({
+            type: WebSocketMessageType.ONLINE,
+            payload: { online: onlineStatus, lastSeen },
+          })
+        );
+        // await this.notifyRecipient(chat, userId, {
+        //   type: WebSocketMessageType.ONLINE,
+        //   //@ts-ignore
+        //   payload: { online: onlineStatus, lastSeen },
+        // });
+        return;
+      }
+
+      console.log("User is online");
+      this.userSockets.get(userId)?.send(
+        JSON.stringify({
+          type: WebSocketMessageType.ONLINE,
+          payload: { online: true },
+        })
+      );
+      // await this.notifyRecipient(chat, userId, {
+      //   type: WebSocketMessageType.ONLINE,
+      //   //@ts-ignore
+      //   payload: {
+      //     //@ts-ignore
+      //     online: true,
+      //   },
+      // });
+
+      console.log("Online status payload", payload);
+    } catch (error) {
+      logger.error("Online status handling error:", error);
+      this.sendError(ws, "Failed to process online status");
     }
   }
 
@@ -302,7 +387,7 @@ export class WebSocketService {
   }
 
   private async invalidateCache(chatId: string): Promise<void> {
-    // await redisClient.del(`chat:${chatId}`);
+    await redisClient.del(`chat:${chatId}`);
   }
 
   private sendError(ws: WebSocket, message: string): void {
@@ -358,8 +443,13 @@ export class WebSocketService {
           }
         });
 
-        ws.on("close", () => {
+        ws.on("close", async () => {
           this.userSockets.delete(user.id);
+          // store last seen status in redis client
+          await redisClient.set(
+            `lastSeen:${user.id}`,
+            new Date().toISOString()
+          );
           logger.info(`User ${user.id} disconnected from WebSocket`);
         });
 
