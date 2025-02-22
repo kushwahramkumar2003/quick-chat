@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { toast } from "sonner";
-import { MessageCircle, LogOut, Plus, Search } from "lucide-react";
+import { MessageCircle, LogOut, Plus, Search, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,6 +16,8 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { chats } from "@/lib/api";
 import { authState } from "@/lib/atoms";
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 interface Message {
   id: string;
@@ -52,6 +54,7 @@ export function Chats() {
   const [searchQuery, setSearchQuery] = useState("");
   const [newChatUsername, setNewChatUsername] = useState("");
   const [isNewChatOpen, setIsNewChatOpen] = useState(false);
+  const [isCreatingChat, setIsCreatingChat] = useState(false);
 
   useEffect(() => {
     fetchChats();
@@ -70,6 +73,12 @@ export function Chats() {
   }
 
   async function handleStartNewChat() {
+    if (!newChatUsername.trim()) {
+      toast.error("Please enter a username");
+      return;
+    }
+
+    setIsCreatingChat(true);
     try {
       const chat = await chats.create(newChatUsername);
       setIsNewChatOpen(false);
@@ -78,6 +87,8 @@ export function Chats() {
     } catch (error) {
       console.log("error", error);
       toast.error("Failed to start new chat");
+    } finally {
+      setIsCreatingChat(false);
     }
   }
 
@@ -93,54 +104,105 @@ export function Chats() {
     return otherUser.username.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
+  function formatDate(dateString: string): string {
+    console.log("dateString", dateString);
+
+    const date = new Date(dateString);
+    const now = new Date();
+
+    const diff = now.getTime() - date.getTime();
+
+    const seconds = Math.floor(diff / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+
+    if (seconds < 60) {
+      return "Just now";
+    } else if (minutes < 60) {
+      return `${minutes}m ago`;
+    } else if (hours < 24) {
+      return `${hours}h ago`;
+    } else if (days === 1) {
+      return "Yesterday";
+    } else if (days < 7) {
+      return `${days}d ago`;
+    } else {
+      return date.toLocaleDateString("en-IN", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b bg-card">
+    <div className="min-h-screen bg-zinc-900 text-zinc-100">
+      <header className="border-b border-zinc-800 bg-zinc-900/50 backdrop-blur-xl sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-primary p-2 rounded-full">
-                <MessageCircle className="w-6 h-6 text-primary-foreground" />
+            <div className="flex items-center space-x-3">
+              <div className="bg-green-500/10 p-2 rounded-full">
+                <MessageCircle className="w-6 h-6 text-green-500" />
               </div>
-              <h1 className="text-xl font-bold">Chats</h1>
+              <h1 className="text-xl font-bold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
+                Chats
+              </h1>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm text-zinc-400 hidden sm:inline">
                 {user?.username}
               </span>
-              <Button variant="ghost" size="icon" onClick={handleLogout}>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleLogout}
+                className="hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100"
+              >
                 <LogOut className="w-5 h-5" />
               </Button>
             </div>
           </div>
           <div className="flex items-center space-x-4">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-500" />
               <Input
                 placeholder="Search chats..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9"
+                className="pl-9 bg-zinc-800/50 border-zinc-700 text-zinc-100 placeholder:text-zinc-500 focus:ring-green-500/20 focus:border-green-500/50"
               />
             </div>
             <Dialog open={isNewChatOpen} onOpenChange={setIsNewChatOpen}>
               <DialogTrigger asChild>
-                <Button>
+                <Button className="bg-green-500 hover:bg-green-600 text-white">
                   <Plus className="w-4 h-4 mr-2" />
                   New Chat
                 </Button>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="bg-zinc-900 border-zinc-800">
                 <DialogHeader>
-                  <DialogTitle>Start New Chat</DialogTitle>
+                  <DialogTitle className="text-zinc-100">
+                    Start New Chat
+                  </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4 pt-4">
                   <Input
                     placeholder="Enter username"
                     value={newChatUsername}
                     onChange={(e) => setNewChatUsername(e.target.value)}
+                    className="bg-zinc-800/50 border-zinc-700 text-zinc-100 placeholder:text-zinc-500 focus:ring-green-500/20 focus:border-green-500/50"
                   />
-                  <Button onClick={handleStartNewChat} className="w-full">
+                  <Button
+                    onClick={handleStartNewChat}
+                    className="w-full bg-green-500 hover:bg-green-600 text-white"
+                    disabled={isCreatingChat || !newChatUsername.trim()}
+                  >
+                    {isCreatingChat ? (
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    ) : (
+                      <Plus className="w-4 h-4 mr-2" />
+                    )}
                     Start Chat
                   </Button>
                 </div>
@@ -151,16 +213,15 @@ export function Chats() {
       </header>
 
       <main className="container mx-auto px-4 py-6">
-        <div className="space-y-4">
+        <div className="space-y-4 max-w-3xl mx-auto">
           {loading ? (
-            // Loading skeletons
             Array.from({ length: 3 }).map((_, i) => (
-              <Card key={i} className="p-4">
+              <Card key={i} className="p-4 bg-zinc-800/50 border-zinc-700">
                 <div className="flex items-center space-x-4">
-                  <Skeleton className="h-12 w-12 rounded-full" />
+                  <Skeleton className="h-12 w-12 rounded-full bg-zinc-700" />
                   <div className="space-y-2 flex-1">
-                    <Skeleton className="h-4 w-[200px]" />
-                    <Skeleton className="h-4 w-[300px]" />
+                    <Skeleton className="h-4 w-[200px] bg-zinc-700" />
+                    <Skeleton className="h-4 w-[300px] bg-zinc-700" />
                   </div>
                 </div>
               </Card>
@@ -174,34 +235,36 @@ export function Chats() {
               return (
                 <Card
                   key={chat.id}
-                  className="p-4 cursor-pointer hover:bg-accent transition-colors"
+                  className={cn(
+                    "p-4 cursor-pointer transition-all duration-200 bg-zinc-800/50 border-zinc-700",
+                    "hover:bg-zinc-700/50 hover:border-zinc-600",
+                    "active:scale-[0.99] active:bg-zinc-700/70"
+                  )}
                   onClick={() => navigate(`/chat/${chat.id}`)}
                 >
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-primary/10 rounded-full p-3 text-primary">
-                      <span className="text-lg font-semibold">
+                  <div className="flex items-center  space-x-4">
+                    <Avatar className="h-10 w-10">
+                      <AvatarFallback className="bg-green-500/10 rounded-full p-3 text-green-500">
                         {otherUser.username[0].toUpperCase()}
-                      </span>
-                    </div>
+                      </AvatarFallback>
+                    </Avatar>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between">
-                        <h3 className="font-medium truncate">
+                        <h3 className="font-medium truncate text-zinc-100">
                           {otherUser.username}
                         </h3>
                         {lastMessage && (
-                          <span className="text-xs text-muted-foreground">
-                            {new Date(
-                              lastMessage.createdAt
-                            ).toLocaleDateString()}
+                          <span className="text-xs text-zinc-500">
+                            {formatDate(lastMessage.createdAt)}
                           </span>
                         )}
                       </div>
                       {lastMessage ? (
-                        <p className="text-sm text-muted-foreground truncate mt-1">
+                        <p className="text-sm text-zinc-400 truncate mt-1">
                           {lastMessage.content}
                         </p>
                       ) : (
-                        <p className="text-sm text-muted-foreground italic mt-1">
+                        <p className="text-sm text-zinc-500 italic mt-1">
                           No messages yet
                         </p>
                       )}
@@ -212,16 +275,21 @@ export function Chats() {
             })
           ) : (
             <div className="text-center py-12">
-              <div className="bg-primary/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <MessageCircle className="w-8 h-8 text-primary" />
+              <div className="bg-green-500/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <MessageCircle className="w-8 h-8 text-green-500" />
               </div>
-              <h3 className="text-lg font-medium mb-2">No chats found</h3>
-              <p className="text-muted-foreground mb-4">
+              <h3 className="text-lg font-medium mb-2 text-zinc-100">
+                No chats found
+              </h3>
+              <p className="text-zinc-400 mb-4">
                 {searchQuery
                   ? "No chats match your search"
                   : "Start a new conversation to begin chatting"}
               </p>
-              <Button onClick={() => setIsNewChatOpen(true)}>
+              <Button
+                onClick={() => setIsNewChatOpen(true)}
+                className="bg-green-500 hover:bg-green-600 text-white"
+              >
                 <Plus className="w-4 h-4 mr-2" />
                 Start New Chat
               </Button>
