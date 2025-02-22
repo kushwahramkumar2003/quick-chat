@@ -4,9 +4,7 @@ import { config } from "../config/config";
 import { redisClient } from "./redis.service";
 import { logger } from "../utils/logger";
 import prisma from "./prisma.service";
-import { boolean } from "zod";
 
-// Types and Interfaces
 export interface User {
   id: string;
   email: string;
@@ -232,7 +230,8 @@ export class WebSocketService {
       }
 
       if (ws.readyState === WebSocket.OPEN) {
-        chat.messages.forEach((msg) => {
+        /* eslint-disable  @typescript-eslint/no-explicit-any */
+        chat.messages.forEach((msg: any) => {
           ws.send(
             JSON.stringify({
               type: WebSocketMessageType.CHAT,
@@ -242,7 +241,7 @@ export class WebSocketService {
         });
       }
 
-      // await this.invalidateCache(payload.chatId);
+      await this.invalidateCache(payload.chatId);
     } catch (error) {
       logger.error("Join handling error:", error);
       this.sendError(ws, "Failed to join chat");
@@ -256,7 +255,7 @@ export class WebSocketService {
     try {
       console.log("Handle online status", payload);
       const { userId, user2Id } = payload;
-      
+
       if (!userId) {
         this.sendError(ws, "Invalid online status");
         return;
