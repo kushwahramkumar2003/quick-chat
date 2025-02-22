@@ -5,14 +5,10 @@ import { toast } from "sonner";
 import { MessageCircle, Mail, Lock, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  Card,
-
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { auth } from "@/lib/api";
 import { authState } from "@/lib/atoms";
+import { setWithExpiry } from "@/lib/utils";
 
 export function Login() {
   const navigate = useNavigate();
@@ -32,8 +28,9 @@ export function Login() {
     try {
       const data = await auth.login(email, password);
       setAuth({ token: data.token, user: data.data.user });
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user", JSON.stringify(data.data.user));
+
+      setWithExpiry("token", data.token, 1000 * 60 * 60 * 1); // 1 hour
+      setWithExpiry("user", JSON.stringify(data.data.user), 1000 * 60 * 60 * 1); // 1 hour
       toast.success("Login successful");
       navigate("/chats");
     } catch {

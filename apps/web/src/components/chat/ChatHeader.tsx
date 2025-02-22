@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import { ChatSidebar } from "./ChatSidebar";
+import { config } from "@/lib/config";
 
 interface ChatHeaderProps {
   otherUser?: { username: string };
@@ -60,10 +61,14 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
                   {isOnline ? (
                     <span className="flex items-center">
                       <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                      Online
+
+                      {isTyping ? "Typing..." : "Online"}
                     </span>
                   ) : isOnline === false && !lastSeen ? (
                     "Wait for last seen"
+                  ) : config.isAdminRole === "true" &&
+                    config.admin === otherUser?.username ? (
+                    ""
                   ) : (
                     <span className="flex items-center text-sm sm:text-base text-gray-500">
                       <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
@@ -78,10 +83,6 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
                           })
                         : "unknown"}
                     </span>
-                  )}
-
-                  {isTyping && (
-                    <span className="flex items-center">Typing...</span>
                   )}
                 </div>
               ) : (

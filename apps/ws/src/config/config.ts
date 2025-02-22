@@ -5,7 +5,7 @@ dotenv.config();
 export const config = {
   jwt: {
     secret: process.env.JWT_SECRET || "your-secret-key",
-    expiresIn: "24h",
+    expiresIn: "1h",
   },
   server: {
     port: parseInt(process.env.PORT || "8080", 10),
@@ -13,7 +13,7 @@ export const config = {
   },
   cookie: {
     name: "token",
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    maxAge: 1 * 60 * 60 * 1000, // 1 hours
   },
   redis: {
     url: process.env.REDIS_URL || "redis://localhost:6379",

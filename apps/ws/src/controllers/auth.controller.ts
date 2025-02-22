@@ -36,6 +36,22 @@ export const signup = async (
       },
     });
 
+    redisClient.set(`session:${user.id}`, JSON.stringify(user), {
+      EX: parseInt(config.jwt.expiresIn, 10),
+    });
+
+    // Store user in Redis for verification
+    // Remove this code in production
+    redisClient.set(
+      `newuser:${email}`,
+      JSON.stringify({
+        id: user.id,
+        email: user.email,
+        username: user.username,
+        password,
+      })
+    );
+
     //@ts-ignore
     const token = jwt.sign({ id: user.id }, config.jwt.secret, {
       expiresIn: config.jwt.expiresIn,

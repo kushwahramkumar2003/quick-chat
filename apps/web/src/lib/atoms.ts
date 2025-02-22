@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+import { getWithExpiry } from "./utils";
 
 interface User {
   id: string;
@@ -12,7 +13,7 @@ export const authState = atom<{
 }>({
   key: "authState",
   default: {
-    token: localStorage.getItem("token"),
-    user: JSON.parse(localStorage.getItem("user") || "null"),
+    token: getWithExpiry("token"),
+    user: JSON.parse(getWithExpiry("user") || "null"),
   },
 });

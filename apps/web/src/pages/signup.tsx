@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { auth } from "@/lib/api";
 import { authState } from "@/lib/atoms";
+import { setWithExpiry } from "@/lib/utils";
 
 export function SignUp() {
   const navigate = useNavigate();
@@ -33,8 +34,8 @@ export function SignUp() {
     try {
       const data = await auth.signup(email, username, password);
       setAuth({ token: data.token, user: data.data.user });
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user", JSON.stringify(data.data.user));
+      setWithExpiry("token", data.token, 1000 * 60 * 60 * 1); // 1 hour
+      setWithExpiry("user", JSON.stringify(data.data.user), 1000 * 60 * 60 * 1); // 1 hour
       toast.success("Account created successfully");
       navigate("/chats");
     } catch {
