@@ -8,7 +8,6 @@ import { Toaster } from "@/components/ui/sonner";
 import { ProtectedRoute } from "@/components/protected-route";
 import { Login } from "@/pages/login";
 import { SignUp } from "@/pages/signup";
-import { Chat } from "@/pages/chat";
 import { Chats } from "./pages/chats";
 import { ChatWrapper } from "./components/ChatWrapper";
 

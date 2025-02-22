@@ -43,16 +43,6 @@ interface Chat {
   updatedAt: string;
 }
 
-interface ChatsResponse {
-  chats: Chat[];
-  pagination: {
-    page: number;
-    limit: number;
-    totalPages: number;
-    totalChats: number;
-  };
-}
-
 export function Chats() {
   const navigate = useNavigate();
   const { user } = useRecoilValue(authState);
@@ -72,6 +62,7 @@ export function Chats() {
       const response = await chats.getAll();
       setChatList(response);
     } catch (error) {
+      console.log("error", error);
       toast.error("Failed to load chats");
     } finally {
       setLoading(false);
@@ -85,6 +76,7 @@ export function Chats() {
       setNewChatUsername("");
       navigate(`/chat/${chat.id}`);
     } catch (error) {
+      console.log("error", error);
       toast.error("Failed to start new chat");
     }
   }

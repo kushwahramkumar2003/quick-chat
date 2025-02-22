@@ -8,7 +8,7 @@ export function ChatWrapper() {
   const navigate = useNavigate();
   const { user, token } = useRecoilValue(authState);
 
-  console.log("ChatWrapper", chatId, user, token);
+  // console.log("ChatWrapper", chatId, user, token);
 
   if (!chatId || !user || !token) {
     return (

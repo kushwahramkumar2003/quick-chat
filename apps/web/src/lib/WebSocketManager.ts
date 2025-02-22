@@ -1,5 +1,3 @@
-// WebSocketManager.ts
-
 export enum WebSocketMessageType {
   CHAT = "chat",
   JOIN = "join",
@@ -7,6 +5,7 @@ export enum WebSocketMessageType {
   CONNECTION = "connection",
   ERROR = "error",
   PRESENCE = "presence",
+  ONLINE = "online",
 }
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
@@ -53,7 +52,6 @@ export class WebSocketManager {
 
     try {
       const wsUrl = `${this.config.url}?token=${this.config.token}`;
-      console.log("Connecting to WebSocket:", wsUrl);
       const ws = new WebSocket(wsUrl);
       this.socket = ws;
 
@@ -92,7 +90,7 @@ export class WebSocketManager {
       clearTimeout(this.typingTimeout);
     }
 
-    if (typing && this.socket?.readyState === WebSocket.OPEN) {
+    if (this.socket?.readyState === WebSocket.OPEN) {
       this.sendMessage({
         type: WebSocketMessageType.TYPING,
         payload: { isTyping: true, chatId, userId },
@@ -134,7 +132,6 @@ export class WebSocketManager {
   }
 
   private handleOpen(): void {
-    console.log("WebSocket connection established");
     this.reconnectAttempts = 0;
     this.isConnected = true;
   }

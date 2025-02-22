@@ -31,7 +31,7 @@ export const auth = {
 export const chats = {
   getAll: async () => {
     const { data } = await api.get("/chats");
-    console.log("data", data);
+    // console.log("data", data);
     return data.data.chats;
   },
   create: async (username: string) => {
@@ -40,7 +40,8 @@ export const chats = {
   },
   getById: async (id: string) => {
     const { data } = await api.get(`/chats/${id}`);
-    return data.chat;
+    // console.log("data", data);
+    return data.data.chat;
   },
   getMessages: async (id: string) => {
     const { data } = await api.get(`/chats/${id}/messages`);

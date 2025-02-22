@@ -1,5 +1,6 @@
+import { chats } from "@/lib/api";
 import { WebSocketManager } from "@/lib/WebSocketManager";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { toast } from "sonner";
 
 export enum WebSocketMessageType {
@@ -9,31 +10,31 @@ export enum WebSocketMessageType {
   CONNECTION = "connection",
   ERROR = "error",
   PRESENCE = "presence",
+  ONLINE = "online",
 }
 
 interface UseWebSocketReturn {
   connectionStatus: "Connected" | "Connecting" | "Disconnected" | "Error";
   isTyping: boolean;
-  // setIsTyping: (typing: boolean) => void;
   getAvatarFallback: (username: string) => string;
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSendMessage: (e: React.FormEvent) => Promise<void>;
   isSidebarOpen: boolean;
   setIsSidebarOpen: (open: boolean) => void;
-
   loading: boolean;
   otherUser: { id: string; username: string } | undefined;
   messages: Message[];
   chatDetails: ChatDetails | null;
   newMessage: string;
   messagesEndRef: React.RefObject<HTMLDivElement>;
+  isOnline: boolean;
+  lastSeen: string | null;
 }
 
 interface ChatProps {
   chatId: string;
   user: { id: string; username: string };
   token: string;
-  // navigate: (path: string) => void;
 }
 
 interface Message {
@@ -63,9 +64,29 @@ export default function useWebSocket({
     "Connected" | "Connecting" | "Disconnected" | "Error"
   >("Disconnected");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [wsManager, setWsManager] = useState<WebSocketManager | null>(null);
+  const [isOnline, setIsOnline] = useState(false);
+  const [lastSeen, setLastSeen] = useState<string | null>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (wsManager && chatDetails) {
+        wsManager.sendMessage({
+          type: WebSocketMessageType.ONLINE,
+          payload: {
+            userId: user.id,
+            user2Id:
+              chatDetails.user2.id === user.id
+                ? chatDetails.user1.id
+                : chatDetails.user2.id,
+          },
+        });
+      }
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [wsManager, chatDetails, user.id]);
 
   useEffect(() => {
     const wsInstance = new WebSocketManager({
@@ -117,6 +138,17 @@ export default function useWebSocket({
     scrollToBottom();
   }, [messages]);
 
+  const fetchChatDetail = useCallback(async () => {
+    if (connectionStatus === "Connected") {
+      const res = await chats.getById(chatId);
+      setChatDetails(res);
+    }
+  }, [connectionStatus, chatId]);
+
+  useEffect(() => {
+    fetchChatDetail();
+  }, [connectionStatus]);
+
   /* eslint-disable  @typescript-eslint/no-explicit-any */
   const handleWebSocketMessage = (message: any) => {
     switch (message.type) {
@@ -126,6 +158,11 @@ export default function useWebSocket({
       case WebSocketMessageType.TYPING:
         handleTypingStatus(message.payload);
         break;
+      case WebSocketMessageType.ONLINE:
+        // console.log("Online status payload", message.payload);
+        setIsOnline(message.payload.online);
+        setLastSeen(message.payload.lastSeen || null);
+        break;
       case WebSocketMessageType.ERROR:
         toast.error(message.payload.message);
         break;
@@ -133,7 +170,6 @@ export default function useWebSocket({
   };
 
   const handleTypingStatus = ({
-    chatId,
     isTyping: isTyping2,
     userId,
   }: {
@@ -141,9 +177,6 @@ export default function useWebSocket({
     isTyping: boolean;
     userId: string;
   }) => {
-    console.log("Typing status: ", isTyping2, userId);
-    console.log("Typing status chatId: ", chatId);
-
     if (userId === user.id) return;
     setSenderIsTyping(isTyping2);
   };
@@ -161,9 +194,8 @@ export default function useWebSocket({
           senderId: user.id,
         },
       });
-
-      setNewMessage("");
       wsManager.setTyping(false, chatId, user.id);
+      setNewMessage("");
     } catch (error) {
       console.log("Error : ", error);
       toast.error("Failed to send message");
@@ -199,7 +231,6 @@ export default function useWebSocket({
     isSidebarOpen,
     setIsSidebarOpen,
     connectionStatus,
-
     loading,
     otherUser,
     messages,
@@ -207,5 +238,7 @@ export default function useWebSocket({
     newMessage,
     messagesEndRef,
     isTyping: senderIsTyping,
+    isOnline,
+    lastSeen,
   };
 }
