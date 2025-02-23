@@ -11,7 +11,7 @@ export const protect = async (
   next: NextFunction
 ) => {
   try {
-    const token = req.cookies[config.cookie.name];
+    const token = req.cookies[config.cookie.name] || req.header("Authorization")?.replace("Bearer ", "");
 
     if (!token) {
       throw new AppError(401, "Please log in to access this resource");

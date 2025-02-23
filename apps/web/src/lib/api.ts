@@ -13,7 +13,7 @@ const api = axios.create({
 api.interceptors.request.use((config) => {
   const token = getWithExpiry("token");
   if (token) {
-    config.headers.Authorization = `token ${token}`;
+    config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
 });
