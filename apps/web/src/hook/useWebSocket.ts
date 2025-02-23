@@ -1,4 +1,5 @@
 import { chats } from "@/lib/api";
+import { config } from "@/lib/config";
 import { WebSocketManager } from "@/lib/WebSocketManager";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { toast } from "sonner";
@@ -90,7 +91,7 @@ export default function useWebSocket({
 
   useEffect(() => {
     const wsInstance = new WebSocketManager({
-      url: "ws://localhost:8081",
+      url: config.wsUrl,
       token,
       onMessage: handleWebSocketMessage,
       reconnectAttempts: 3,
