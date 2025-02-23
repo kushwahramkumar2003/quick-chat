@@ -10,15 +10,27 @@ import { logger } from "./utils/logger";
 
 const app = express();
 
-// Middleware
+const allowedOrigins = ["http://localhost:5173", process.env.FRONTEND_URL];
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: function (origin, callback) {
+      const isAllowed = allowedOrigins.includes(origin!) || !origin;
+      callback(null, isAllowed);
+    },
     credentials: true,
+    exposedHeaders: [
+      "set-cookie",
+      "Content-Disposition",
+      "Content-Type",
+      "Content-Length",
+    ],
   })
 );
+
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/auth", authRoutes);
