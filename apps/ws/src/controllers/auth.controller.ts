@@ -61,7 +61,7 @@ export const signup = async (
       maxAge: config.cookie.maxAge,
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      sameSite: "none",
     });
 
     // Send welcome email
@@ -108,7 +108,7 @@ export const login = async (
       maxAge: config.cookie.maxAge,
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      sameSite: "none",
     });
 
     // Store user session in Redis
