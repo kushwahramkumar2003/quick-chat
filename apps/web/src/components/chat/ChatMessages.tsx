@@ -19,21 +19,90 @@ export const ChatMessages: React.FC<ChatMessagesProps> = ({
   getAvatarFallback,
   messagesEndRef,
 }) => {
+  const formatDate = (dateString: string) => {
+    try {
+      const date = new Date(dateString);
+
+      // Check if date is valid
+      if (isNaN(date.getTime())) {
+        throw new Error("Invalid date");
+      }
+
+      // Get today's date without time
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      // Get yesterday's date
+      const yesterday = new Date(today);
+      yesterday.setDate(yesterday.getDate() - 1);
+
+      // Get the message date without time
+      const messageDate = new Date(date);
+      messageDate.setHours(0, 0, 0, 0);
+
+      // Check if the date is today or yesterday
+      if (messageDate.getTime() === today.getTime()) {
+        return "Today";
+      } else if (messageDate.getTime() === yesterday.getTime()) {
+        return "Yesterday";
+      } else {
+        // For other dates, use the Indian format
+        return new Intl.DateTimeFormat("en-IN", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }).format(date);
+      }
+    } catch (error) {
+      console.error("Date formatting error:", error);
+      return "Invalid date";
+    }
+  };
+
+  const formatTime = (dateString: string) => {
+    try {
+      const date = new Date(dateString);
+
+      // Check if date is valid
+      if (isNaN(date.getTime())) {
+        throw new Error("Invalid date");
+      }
+
+      return new Intl.DateTimeFormat("en-IN", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      }).format(date);
+    } catch (error) {
+      console.error("Time formatting error:", error);
+      return "";
+    }
+  };
+
   const groupMessagesByDate = () => {
     const groups: { [key: string]: typeof messages } = {};
     messages.forEach((message) => {
-      const date = new Date(message.createdAt).toLocaleDateString();
-      if (!groups[date]) {
-        groups[date] = [];
+      try {
+        const date = new Date(message.createdAt);
+        // Validate date
+        if (isNaN(date.getTime())) {
+          throw new Error("Invalid date");
+        }
+        // Use ISO string and split to get just the date part
+        const dateKey = date.toISOString().split("T")[0];
+        if (!groups[dateKey]) {
+          groups[dateKey] = [];
+        }
+        groups[dateKey].push(message);
+      } catch (error) {
+        console.error("Error grouping message:", error);
       }
-      groups[date].push(message);
     });
     return groups;
   };
 
   const groupedMessages = groupMessagesByDate();
-
-  //   console.log("messages", messages);
 
   return (
     <ScrollArea className="flex-1 p-4 overflow-y-auto">
@@ -41,12 +110,7 @@ export const ChatMessages: React.FC<ChatMessagesProps> = ({
         <div key={date} className="mb-6">
           <div className="flex justify-center mb-4">
             <span className="bg-zinc-700 text-zinc-300 px-3 py-1 rounded-full text-sm">
-              {new Date(date).toLocaleDateString(undefined, {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
+              {formatDate(date)}
             </span>
           </div>
 
@@ -87,10 +151,7 @@ export const ChatMessages: React.FC<ChatMessagesProps> = ({
                         isOwnMessage ? "text-green-200" : "text-zinc-400"
                       }`}
                     >
-                      {new Date(message.createdAt).toLocaleTimeString([], {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      })}
+                      {formatTime(message.createdAt)}
                     </p>
                   </div>
                 </div>

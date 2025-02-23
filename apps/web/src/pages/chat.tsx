@@ -40,9 +40,6 @@ const LoadingAnimation = () => (
   <div className="absolute inset-0 flex items-center justify-center">
     <div className="relative">
       <div className="h-16 w-16 rounded-full border-4 border-zinc-700 border-t-green-500 animate-spin" />
-      {/* <div className="absolute inset-0 flex items-center justify-center">
-        <div className="h-8 w-8 rounded-full border-4 border-zinc-700 border-t-green-500 animate-spin-reverse" />
-      </div> */}
     </div>
   </div>
 );
@@ -54,6 +51,7 @@ export const Chat: React.FC<ChatProps> = ({
   navigate,
 }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
   const {
@@ -77,6 +75,36 @@ export const Chat: React.FC<ChatProps> = ({
     user,
     token,
   });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    const handleVisualViewportResize = () => {
+      if (window.visualViewport) {
+        setViewportHeight(window.visualViewport.height);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener(
+        "resize",
+        handleVisualViewportResize
+      );
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener(
+          "resize",
+          handleVisualViewportResize
+        );
+      }
+    };
+  }, []);
 
   const handleScroll = () => {
     if (!scrollAreaRef.current) return;
@@ -133,7 +161,10 @@ export const Chat: React.FC<ChatProps> = ({
   }
 
   return (
-    <div className="h-screen bg-zinc-900 text-zinc-100 flex flex-col">
+    <div
+      className="relative flex flex-col bg-zinc-900 text-zinc-100"
+      style={{ height: `${viewportHeight}px` }}
+    >
       <ChatHeader
         otherUser={otherUser}
         connectionStatus={connectionStatus}
@@ -148,13 +179,19 @@ export const Chat: React.FC<ChatProps> = ({
         lastSeen={lastSeen}
       />
 
-      <ChatMessages
-        messages={messages}
-        user={user}
-        otherUser={otherUser}
-        getAvatarFallback={getAvatarFallback}
-        messagesEndRef={messagesEndRef}
-      />
+      <div
+        className="flex-1 overflow-y-auto"
+        ref={scrollAreaRef}
+        style={{ height: `calc(${viewportHeight}px - 130px)` }}
+      >
+        <ChatMessages
+          messages={messages}
+          user={user}
+          otherUser={otherUser}
+          getAvatarFallback={getAvatarFallback}
+          messagesEndRef={messagesEndRef}
+        />
+      </div>
 
       <AnimatePresence>
         {showScrollButton && (
